@@ -1,0 +1,44 @@
+[
+  {
+    "productID": "TOY_1",
+    "productName": "Chew-chain toy",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/toys/chew-toy.webp",
+    "productText": "N/A",
+    "productPrice": 11.99
+  },
+  {
+    "productID": "TOY_2",
+    "productName": "Hedgehog Toy Set",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/toys/hedgehog-toy-set.webp",
+    "productText": "N/A",
+    "productPrice": 16.99
+  },
+  {
+    "productID": "TOY_3",
+    "productName": "Run-about Ball",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/toys/run-about-ball.webp",
+    "productText": "N/A",
+    "productPrice": 18.99
+  },
+  {
+    "productID": "TOY_4",
+    "productName": "Running Wheel",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/toys/running-wheel.webp",
+    "productText": "N/A",
+    "productPrice": 21.99
+  },
+  {
+    "productID": "TOY_5",
+    "productName": "Toilet Paper Rolls",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/toys/toilet-paper-rolls.webp",
+    "productText": "N/A",
+    "productPrice": 14.99
+  },
+  {
+    "productID": "TOY_6",
+    "productName": "White Ball With Holes",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/toys/white-ball-with-holes.webp",
+    "productText": "N/A",
+    "productPrice": 13.99
+  }
+]

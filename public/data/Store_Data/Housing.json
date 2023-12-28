@@ -1,0 +1,44 @@
+[
+  {
+    "productID": "HOUSING_1",
+    "productName": "Rodent Cage",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/housing/hedgehog-cage.webp",
+    "productText": "N/A",
+    "productPrice": 62.99
+  },
+  {
+    "productID": "HOUSING_2",
+    "productName": "Hedgehog Food Bowl",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/housing/hedgehog-food-bowl.webp",
+    "productText": "N/A",
+    "productPrice": 15.99
+  },
+  {
+    "productID": "HOUSING_3",
+    "productName": "Hedgehog Housing",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/housing/hedgehog-housing.webp",
+    "productText": "N/A",
+    "productPrice": 19.99
+  },
+  {
+    "productID": "HOUSING_4",
+    "productName": "Hedgehog Hut",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/housing/fruit-and-hut.webp",
+    "productText": "N/A",
+    "productPrice": 14.99
+  },
+  {
+    "productID": "HOUSING_5",
+    "productName": "Water Dispenser",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/housing/water-dispenser.webp",
+    "productText": "N/A",
+    "productPrice": 12.99
+  },
+  {
+    "productID": "HOUSING_6",
+    "productName": "Wood Shavings",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/housing/wood-shavings.webp",
+    "productText": "N/A",
+    "productPrice": 20.99
+  }
+]

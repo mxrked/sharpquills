@@ -1,0 +1,44 @@
+[
+  {
+    "productID": "FOOD_1",
+    "productName": "Hedgehog Formula",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/food/hedgehog-formula.webp",
+    "productText": "N/A",
+    "productPrice": 16.99
+  },
+  {
+    "productID": "FOOD_2",
+    "productName": "Hedgehog Diet Formula",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/food/hedgehog-diet.webp",
+    "productText": "N/A",
+    "productPrice": 25.99
+  },
+  {
+    "productID": "FOOD_3",
+    "productName": "Hedgehog Niblets",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/food/hedgehog-niblets.webp",
+    "productText": "N/A",
+    "productPrice": 19.99
+  },
+  {
+    "productID": "FOOD_4",
+    "productName": "Fruit/Berry Niblets",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/food/fruit-and-berry-niblets.webp",
+    "productText": "N/A",
+    "productPrice": 14.99
+  },
+  {
+    "productID": "FOOD_5",
+    "productName": "Hedgehog Mealworms",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/food/hedgehog-mealworms.webp",
+    "productText": "N/A",
+    "productPrice": 11.99
+  },
+  {
+    "productID": "FOOD_6",
+    "productName": "Hedgehog Nutrient",
+    "productImg": "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/imgs/food/hedgehog-nutrient.webp",
+    "productText": "N/A",
+    "productPrice": 15.99
+  }
+]
