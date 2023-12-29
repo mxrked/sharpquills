@@ -54,7 +54,11 @@ export const DesktopNav = () => {
                     </div>
                   </a>
                 ) : (
-                  <div className={`${styles.logo}`} title="Sharpquills - Logo.">
+                  <div
+                    className={`${styles.logo}`}
+                    title="Sharpquills - Logo."
+                    style={{ opacity: 0.5, pointerEvents: "none" }}
+                  >
                     <LazyLoadImage
                       src={LOGO}
                       alt={"Sharpquills - Logo."}
@@ -355,7 +359,10 @@ export const DesktopNav = () => {
                     </div>
                   </a>
                 ) : (
-                  <div className={`${styles.cart_link}`}>
+                  <div
+                    className={`${styles.cart_link}`}
+                    style={{ opacity: 0.5, pointerEvents: "none" }}
+                  >
                     <FaShoppingCart
                       className={`${styles.icon} half-second orientation-change-element`}
                     />
