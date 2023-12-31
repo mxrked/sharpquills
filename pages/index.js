@@ -8,15 +8,23 @@ import path from "path";
 
 // Data/Functions/Images Imports
 import SaveCartItems from "@/assets/functions/data/cart/SaveCartItems";
+import HeadingElement from "@/assets/functions/dom/elements/HeadingElement";
+
+import { INDEX_TOP_BG } from "@/assets/cdns/CDNBgs";
+
+import { PageFade } from "@/assets/animations/components/PageFade";
+import { FadeLeft } from "@/assets/animations/components/FadeLeft";
 
 // Component Imports
+import { PageHead } from "@/assets/components/global/All/PageHead";
 import { DesktopNav } from "@/assets/components/global/Nav/Desktop/DesktopNav";
 import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
 import { MobileNavLinks } from "@/assets/components/global/Nav/Mobile/MobileNavLinks";
+import { Top } from "@/assets/components/pages/All/Top";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
-import styles from "../assets/styles/modules/Index/Index.module.css";
+import index_styles from "../assets/styles/modules/Index/Index.module.css";
 import nav_styles from "../assets/styles/modules/Nav/Nav.module.css";
 
 export async function getServerSideProps() {
@@ -122,26 +130,29 @@ export default function Home({
   // Detecting when the user clicks outside of the mobileNavHolder and closes it
   useEffect(() => {
     const handleOutsideClick = (e) => {
-      if (
-        mobileNavHolderRef.current &&
-        !mobileNavHolderRef.current.contains(e.target)
-      ) {
-        document.getElementById("mobileNavLinks").style.display = "none";
-        document.getElementById("toggler").style.display = "block";
-        document.getElementById("closer").style.display = "none";
-        document.getElementById("togglerCloserCB").checked = false;
-        document.getElementById("mobileProductsCB").checked = false;
-        document.getElementById("mobileTypesCB").checked = false;
-        document
-          .getElementById("typesCBHolder")
-          .classList.remove("toggle-dropdown");
-        document
-          .getElementById("productsCBHolder")
-          .classList.remove("toggle-dropdown");
-        document.getElementById("mobileNavTypesLinks").style.height = 0;
-        document.getElementById("mobileNavProductsLinks").style.height = 0;
-        document.getElementById("mobileNavLinks").style.height = 0;
-        document.getElementById("mobileNavLinksOverlay").style.display = "none";
+      if (sessionStorage.getItem("Mobile Device")) {
+        if (
+          mobileNavHolderRef.current &&
+          !mobileNavHolderRef.current.contains(e.target)
+        ) {
+          document.getElementById("toggler").style.display = "block";
+          document.getElementById("closer").style.display = "none";
+          document.getElementById("togglerCloserCB").checked = false;
+          document.getElementById("mobileProductsCB").checked = false;
+          document.getElementById("mobileTypesCB").checked = false;
+          document
+            .getElementById("typesCBHolder")
+            .classList.remove("toggle-dropdown");
+          document
+            .getElementById("productsCBHolder")
+            .classList.remove("toggle-dropdown");
+          document.getElementById("mobileNavTypesLinks").style.height = 0;
+          document.getElementById("mobileNavProductsLinks").style.height = 0;
+          document.getElementById("mobileNavLinks").style.height = 0;
+          document.getElementById("mobileNavLinks").style.display = "none";
+          document.getElementById("mobileNavLinksOverlay").style.display =
+            "none";
+        }
       }
     };
 
@@ -215,20 +226,52 @@ export default function Home({
     }, 500);
   }, []);
 
+  // Objects/Instances
+  const TOP_MAIN_HEADING = HeadingElement("Provide", "And Learn.");
+
+  const TOP_OBJ = {
+    id: "indexTop",
+    router: router,
+    stylesSrc: index_styles,
+    bg: INDEX_TOP_BG,
+    topText: "All Things Hedgie.",
+    heading: TOP_MAIN_HEADING,
+    text: `
+    Discover a diverse range of products—toys, food, and housing—crafted for your hedgie's comfort. Uncover insights into different hedgehog species too.`,
+    links: [
+      {
+        linkID: "TOP_L_1",
+        linkName: "View Store",
+        linkRoute: "/store",
+      },
+      {
+        linkID: "TOP_L_2",
+        linkName: "View Types",
+        linkRoute: "/types",
+      },
+    ],
+  };
+
   return (
     <div id="PAGE" className="page">
-      <DesktopNav />
-      <div id="mobileNavHolder" ref={mobileNavHolderRef}>
-        <MobileNav />
-        <MobileNavLinks />
-      </div>
+      <PageHead page_head_data={PH_DATA} icons_data={PH_ICONS_DATA} />
+
+      <PageFade>
+        <DesktopNav />
+        <div id="mobileNavHolder" ref={mobileNavHolderRef}>
+          <MobileNav />
+          <MobileNavLinks />
+        </div>
+      </PageFade>
 
       <div id="PAGE_CNT" className="page-cnt">
         <div
           id="mobileNavLinksOverlay"
           className={`${nav_styles.mobile_nav_links_overlay}`}
         />
-        s
+        <PageFade>
+          <Top object={TOP_OBJ} />
+        </PageFade>
       </div>
     </div>
   );
