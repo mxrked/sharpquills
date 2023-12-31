@@ -6,19 +6,19 @@
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-import { LazyLoadBackgroundImage } from "../../global/All/LazyLoadBackgroundImage";
+import TriggerPageExit from "@/assets/functions/dom/triggers/TriggerPageExit";
 
-import { WHITE_WAVE } from "@/assets/cdns/CDNImgs";
+import { LazyLoadBackgroundImage } from "../../global/All/LazyLoadBackgroundImage";
 
 export const Top = (props) => {
   const OBJECT = props.object;
+  const ROUTER = OBJECT.router;
   const STYLES = OBJECT.stylesSrc;
   const BG = OBJECT.bg;
   const TOP_TEXT = OBJECT.topText;
   const HEADING = OBJECT.heading;
   const TEXT = OBJECT.text;
   const LINKS = OBJECT.links;
-  const DIVIDER_TYPE = OBJECT.dividerType;
 
   return (
     <section id={OBJECT.id} className={`${STYLES.page_top} half-second`}>
@@ -57,9 +57,18 @@ export const Top = (props) => {
                 LINKS.length > 0 ? (
                   <ul>
                     {LINKS.map((link) => (
-                      <li key={link.linkID}>
+                      <li key={link.linkID} className={STYLES[link.linkID]}>
                         <a
-                          href={link.linkRoute}
+                          // href={link.linkRoute}
+                          onClick={(e) => {
+                            e.preventDefault();
+
+                            TriggerPageExit();
+
+                            setTimeout(() => {
+                              ROUTER.push(link.linkRoute);
+                            }, 1200);
+                          }}
                           className="half-second orientation-change-element"
                         >
                           <span>{link.linkName}</span>
@@ -71,17 +80,6 @@ export const Top = (props) => {
               </div>
             </div>
           </div>
-
-          {DIVIDER_TYPE == "wave" ? (
-            <LazyLoadImage
-              src={WHITE_WAVE}
-              className={STYLES.page_top_white_wave}
-            />
-          ) : null}
-
-          {DIVIDER_TYPE == "slanted" ? (
-            <div className={STYLES.slanted} />
-          ) : null}
         </div>
       ) : null}
     </section>
