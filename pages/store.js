@@ -11,9 +11,12 @@ import SaveCartItems from "@/assets/functions/data/cart/SaveCartItems";
 
 // Component Imports
 import { DesktopNav } from "@/assets/components/global/Nav/Desktop/DesktopNav";
+import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
+import { MobileNavLinks } from "@/assets/components/global/Nav/Mobile/MobileNavLinks";
 
 // Style Imports
 import "../assets/styles/modules/Store/Store.module.css";
+import nav_styles from "../assets/styles/modules/Nav/Nav.module.css";
 
 export async function getServerSideProps() {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/Page_Head_Data/";
@@ -98,6 +101,93 @@ export default function Store({
 }) {
   const router = useRouter();
 
+  const mobileNavHolderRef = useRef(null);
+  const [IS_MOBILE_NAV_HOLDER_VISIBLE, SET_IS_MOBILE_NAV_HOLDER_VISIBLE] =
+    useState(true);
+
+  // Detecting when the user clicks outside of the mobileNavHolder and closes it
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (
+        mobileNavHolderRef.current &&
+        !mobileNavHolderRef.current.contains(e.target)
+      ) {
+        document.getElementById("mobileNavLinks").style.display = "none";
+        document.getElementById("toggler").style.display = "block";
+        document.getElementById("closer").style.display = "none";
+        document.getElementById("togglerCloserCB").checked = false;
+        document.getElementById("mobileProductsCB").checked = false;
+        document.getElementById("mobileTypesCB").checked = false;
+        document
+          .getElementById("typesCBHolder")
+          .classList.remove("toggle-dropdown");
+        document
+          .getElementById("productsCBHolder")
+          .classList.remove("toggle-dropdown");
+        document.getElementById("mobileNavTypesLinks").style.height = 0;
+        document.getElementById("mobileNavProductsLinks").style.height = 0;
+        document.getElementById("mobileNavLinks").style.height = 0;
+        document.getElementById("mobileNavLinksOverlay").style.display = "none";
+      }
+    };
+
+    document.body.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.body.removeEventListener("click", handleOutsideClick);
+    };
+  }, [mobileNavHolderRef]);
+
+  // This is used to close the mobile nav links when the user scrolls passed the mobileNavHolder
+  const handleMobileNavHolderNotVisible = (isElementVisible) => {
+    if (!isElementVisible && IS_MOBILE_NAV_HOLDER_VISIBLE) {
+      document.getElementById("togglerCloserCB").checked = false;
+      document.getElementById("mobileProductsCB").checked = false;
+      document.getElementById("mobileTypesCB").checked = false;
+      document.getElementById("mobileNavTypesLinks").style.height = 0;
+      document.getElementById("mobileNavProductsLinks").style.height = 0;
+      document.getElementById("mobileNavLinks").style.height = "0";
+      document
+        .getElementById("typesCBHolder")
+        .classList.remove("toggle-dropdown");
+      document
+        .getElementById("productsCBHolder")
+        .classList.remove("toggle-dropdown");
+      document.getElementById("closer").style.display = "none";
+      document.getElementById("toggler").style.display = "block";
+      document.getElementById("mobileNavLinks").style.display = "none";
+      document.getElementById("mobileNavLinksOverlay").style.display = "none";
+    }
+  };
+
+  // Detecting when the user scrolls passed the mobileNavHolder and will close it if it is open
+  useEffect(() => {
+    const checkMobileNavHolderVisibility = () => {
+      if (mobileNavHolderRef.current) {
+        const mobileNavHolderRect =
+          mobileNavHolderRef.current.getBoundingClientRect();
+        const isElementVisible =
+          mobileNavHolderRect.top < window.innerHeight &&
+          mobileNavHolderRect.bottom >= 0;
+
+        handleMobileNavHolderNotVisible(isElementVisible);
+
+        SET_IS_MOBILE_NAV_HOLDER_VISIBLE(isElementVisible);
+      }
+    };
+
+    // Adding the scroll event listener
+    window.addEventListener("scroll", checkMobileNavHolderVisibility);
+
+    // Checking when page loads
+    checkMobileNavHolderVisibility();
+
+    // Clean up
+    return () => {
+      window.removeEventListener("scroll", checkMobileNavHolderVisibility);
+    };
+  }, []);
+
   // Saving Cart Data
   useEffect(() => {
     // DeclareStorageVariable("local", "Item Name: Toy 1", "Toy 1");
@@ -114,9 +204,16 @@ export default function Store({
   return (
     <div id="PAGE" className="page">
       <DesktopNav />
+      <div id="mobileNavHolder" ref={mobileNavHolderRef}>
+        <MobileNav />
+        <MobileNavLinks />
+      </div>
 
       <div id="PAGE_CNT" className="page-cnt">
-        Store
+        <div
+          id="mobileNavLinksOverlay"
+          className={`${nav_styles.mobile_nav_links_overlay}`}
+        />
       </div>
     </div>
   );
