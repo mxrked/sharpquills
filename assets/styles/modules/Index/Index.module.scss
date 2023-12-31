@@ -26,6 +26,117 @@
 }
 
 // Desktop
+.page_top {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+
+  .page_top_main {
+    height: 900px;
+    width: 100%;
+    position: relative;
+
+    .page_top_main_bg_BG {
+      @include bGSU(cover, center);
+    }
+
+    .page_top_main_bg_IMG {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .page_top_main_overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      @include displayElement(flex, flex-start, center);
+      padding-left: 40px;
+      padding-right: 40px;
+
+      .page_top_main_overlay_cnt {
+        max-width: 1400px;
+        width: 100%;
+        @include quickCenter("relative");
+        overflow: hidden;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+
+        .page_top_main_top_text {
+          font-family: "Rubik Semi Bold";
+          font-size: clamp(23px, 26px, 26px);
+          color: rgb(228, 228, 228);
+          margin-bottom: 5px;
+          display: block;
+        }
+
+        .page_top_main_heading {
+          font-family: "Rubik Bold";
+          font-size: clamp(95px, 105px, 105px);
+          color: white;
+          line-height: 95px;
+        }
+
+        p {
+          font-family: "Rubik Medium";
+          font-size: clamp(20px, 20px, 20px);
+          color: white;
+          max-width: 800px;
+          margin-top: 10px;
+          margin-bottom: 30px;
+        }
+
+        ul {
+          @include displayElement(flex, flex-start, center);
+
+          li {
+            a {
+              text-decoration: none;
+              color: white;
+              font-family: "Rubik Semi Bold";
+              font-size: clamp(18px, 18px, 18px);
+              @include displayElement(flex, center, center);
+              padding-left: 15px;
+              padding-right: 15px;
+              padding-top: 1px;
+              height: 45px;
+              cursor: pointer;
+            }
+          }
+
+          .TOP_L_1 {
+            margin-right: 15px;
+
+            a {
+              background-color: $Apple;
+
+              &:hover {
+                background-color: $Everglade;
+              }
+            }
+          }
+
+          .TOP_L_2 {
+            a {
+              background-color: $PickledBean;
+
+              &:hover {
+                background-color: $HeavyMetal;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {

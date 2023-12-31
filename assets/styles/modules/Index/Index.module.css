@@ -17,4 +17,105 @@
 @font-face {
   font-family: "Rubik Regular";
   src: url("https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/CDN_sharpquills/fonts/Rubik-Regular.ttf");
+}
+.page_top {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+.page_top .page_top_main {
+  height: 900px;
+  width: 100%;
+  position: relative;
+}
+.page_top .page_top_main .page_top_main_bg_BG {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page_top .page_top_main .page_top_main_bg_IMG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.page_top .page_top_main .page_top_main_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.page_top .page_top_main .page_top_main_overlay .page_top_main_overlay_cnt {
+  max-width: 1400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.page_top .page_top_main .page_top_main_overlay .page_top_main_overlay_cnt .page_top_main_top_text {
+  font-family: "Rubik Semi Bold";
+  font-size: 26px;
+  color: rgb(228, 228, 228);
+  margin-bottom: 5px;
+  display: block;
+}
+.page_top .page_top_main .page_top_main_overlay .page_top_main_overlay_cnt .page_top_main_heading {
+  font-family: "Rubik Bold";
+  font-size: 105px;
+  color: white;
+  line-height: 95px;
+}
+.page_top .page_top_main .page_top_main_overlay .page_top_main_overlay_cnt p {
+  font-family: "Rubik Medium";
+  font-size: 20px;
+  color: white;
+  max-width: 800px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.page_top .page_top_main .page_top_main_overlay .page_top_main_overlay_cnt ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.page_top .page_top_main .page_top_main_overlay .page_top_main_overlay_cnt ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Rubik Semi Bold";
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 1px;
+  height: 45px;
+  cursor: pointer;
+}
+.page_top .page_top_main .page_top_main_overlay .page_top_main_overlay_cnt ul .TOP_L_1 {
+  margin-right: 15px;
+}
+.page_top .page_top_main .page_top_main_overlay .page_top_main_overlay_cnt ul .TOP_L_1 a {
+  background-color: #4E9F3D;
+}
+.page_top .page_top_main .page_top_main_overlay .page_top_main_overlay_cnt ul .TOP_L_1 a:hover {
+  background-color: #1E5128;
+}
+.page_top .page_top_main .page_top_main_overlay .page_top_main_overlay_cnt ul .TOP_L_2 a {
+  background-color: #65451F;
+}
+.page_top .page_top_main .page_top_main_overlay .page_top_main_overlay_cnt ul .TOP_L_2 a:hover {
+  background-color: #191A19;
 }/*# sourceMappingURL=Index.module.css.map */

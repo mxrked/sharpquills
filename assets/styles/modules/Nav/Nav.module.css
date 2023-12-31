@@ -87,6 +87,7 @@
 .desktop_nav .desktop_nav_inner .desktop_nav_inner_box .desktop_nav_inner_row .desktop_nav_R .desktop_nav_inner_side_cnt .desktop_nav_main_links li a {
   text-decoration: none;
   color: #1E5128;
+  cursor: pointer;
 }
 .desktop_nav .desktop_nav_inner .desktop_nav_inner_box .desktop_nav_inner_row .desktop_nav_R .desktop_nav_inner_side_cnt .desktop_nav_main_links .products_link_li div,
 .desktop_nav .desktop_nav_inner .desktop_nav_inner_box .desktop_nav_inner_row .desktop_nav_R .desktop_nav_inner_side_cnt .desktop_nav_main_links .types_link_li div {
@@ -342,6 +343,7 @@
   color: white;
   text-decoration: none;
   border-bottom: 2px solid rgba(66, 66, 66, 0.843);
+  cursor: pointer;
 }
 .mobile_nav_links li a:hover {
   background-color: rgb(26, 26, 26);
