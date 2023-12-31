@@ -13,6 +13,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { LOGO } from "@/assets/cdns/CDNIcons";
 
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
+import TriggerPageExit from "@/assets/functions/dom/triggers/TriggerPageExit";
 
 export const DesktopNav = () => {
   const router = useRouter();
@@ -31,7 +32,16 @@ export const DesktopNav = () => {
               <div className={`${styles.desktop_nav_inner_side_cnt}`}>
                 {router.pathname !== "/" ? (
                   <a
-                    href="/"
+                    // href="/"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      TriggerPageExit();
+
+                      setTimeout(() => {
+                        router.push("/");
+                      }, 1200);
+                    }}
                     className={`${styles.logo}`}
                     title="Sharpquills - Logo."
                   >
@@ -89,7 +99,16 @@ export const DesktopNav = () => {
                   {router.pathname !== "/" ? (
                     <li>
                       <a
-                        href="/"
+                        // href="/"
+                        onClick={(e) => {
+                          e.preventDefault();
+
+                          TriggerPageExit();
+
+                          setTimeout(() => {
+                            router.push("/");
+                          }, 1200);
+                        }}
                         className="orientation-change-element half-second"
                       >
                         <span>HOME</span>
@@ -156,7 +175,16 @@ export const DesktopNav = () => {
                       >
                         <li>
                           <a
-                            href="/store#food"
+                            // href="/store#food"
+                            onClick={(e) => {
+                              e.preventDefault();
+
+                              TriggerPageExit();
+
+                              setTimeout(() => {
+                                router.push("/store#food");
+                              }, 1200);
+                            }}
                             className="orientation-change-element half-second"
                           >
                             <span>Food</span>
@@ -164,7 +192,16 @@ export const DesktopNav = () => {
                         </li>
                         <li>
                           <a
-                            href="/store#toys"
+                            // href="/store#toys"
+                            onClick={(e) => {
+                              e.preventDefault();
+
+                              TriggerPageExit();
+
+                              setTimeout(() => {
+                                router.push("/store#toys");
+                              }, 1200);
+                            }}
                             className="orientation-change-element half-second"
                           >
                             <span>Toys</span>
@@ -172,7 +209,16 @@ export const DesktopNav = () => {
                         </li>
                         <li>
                           <a
-                            href="/store#housing"
+                            // href="/store#housing"
+                            onClick={(e) => {
+                              e.preventDefault();
+
+                              TriggerPageExit();
+
+                              setTimeout(() => {
+                                router.push("/store#housing");
+                              }, 1200);
+                            }}
                             className="orientation-change-element half-second"
                           >
                             <span>Housing</span>
@@ -180,7 +226,16 @@ export const DesktopNav = () => {
                         </li>
                         <li>
                           <a
-                            href="/store"
+                            // href="/store"
+                            onClick={(e) => {
+                              e.preventDefault();
+
+                              TriggerPageExit();
+
+                              setTimeout(() => {
+                                router.push("/store");
+                              }, 1200);
+                            }}
                             className="orientation-change-element half-second"
                           >
                             <span>View All</span>
@@ -253,7 +308,16 @@ export const DesktopNav = () => {
                       >
                         <li>
                           <a
-                            href="/types#atelerix"
+                            // href="/types#atelerix"
+                            onClick={(e) => {
+                              e.preventDefault();
+
+                              TriggerPageExit();
+
+                              setTimeout(() => {
+                                router.push("/types#atelerix");
+                              }, 1200);
+                            }}
                             className="orientation-change-element half-second"
                           >
                             <span>Atelerix</span>
@@ -261,7 +325,16 @@ export const DesktopNav = () => {
                         </li>
                         <li>
                           <a
-                            href="/types#erinaceus"
+                            // href="/types#erinaceus"
+                            onClick={(e) => {
+                              e.preventDefault();
+
+                              TriggerPageExit();
+
+                              setTimeout(() => {
+                                router.push("/types#erinaceus");
+                              }, 1200);
+                            }}
                             className="orientation-change-element half-second"
                           >
                             <span>Erinaceus</span>
@@ -269,7 +342,16 @@ export const DesktopNav = () => {
                         </li>
                         <li>
                           <a
-                            href="/types#hemiechinus"
+                            // href="/types#hemiechinus"
+                            onClick={(e) => {
+                              e.preventDefault();
+
+                              TriggerPageExit();
+
+                              setTimeout(() => {
+                                router.push("/types#hemiechinus");
+                              }, 1200);
+                            }}
                             className="orientation-change-element half-second"
                           >
                             <span>Hemiechinus</span>
@@ -277,7 +359,16 @@ export const DesktopNav = () => {
                         </li>
                         <li>
                           <a
-                            href="/types#mesechinus"
+                            // href="/types#mesechinus"
+                            onClick={(e) => {
+                              e.preventDefault();
+
+                              TriggerPageExit();
+
+                              setTimeout(() => {
+                                router.push("/types#mesechinus");
+                              }, 1200);
+                            }}
                             className="orientation-change-element half-second"
                           >
                             <span>Mesechinus</span>
@@ -285,7 +376,16 @@ export const DesktopNav = () => {
                         </li>
                         <li>
                           <a
-                            href="/types#paraechinus"
+                            // href="/types#paraechinus"
+                            onClick={(e) => {
+                              e.preventDefault();
+
+                              TriggerPageExit();
+
+                              setTimeout(() => {
+                                router.push("/types#paraechinus");
+                              }, 1200);
+                            }}
                             className="orientation-change-element half-second"
                           >
                             <span>Paraechinus</span>
@@ -293,7 +393,16 @@ export const DesktopNav = () => {
                         </li>
                         <li>
                           <a
-                            href="/types"
+                            // href="/types"
+                            onClick={(e) => {
+                              e.preventDefault();
+
+                              TriggerPageExit();
+
+                              setTimeout(() => {
+                                router.push("/types");
+                              }, 1200);
+                            }}
                             className="orientation-change-element half-second"
                           >
                             <span>View All</span>
@@ -316,7 +425,16 @@ export const DesktopNav = () => {
                   {router.pathname !== "/info" ? (
                     <li>
                       <a
-                        href="/info"
+                        // href="/info"
+                        onClick={(e) => {
+                          e.preventDefault();
+
+                          TriggerPageExit();
+
+                          setTimeout(() => {
+                            router.push("/info");
+                          }, 1200);
+                        }}
                         className="orientation-change-element half-second"
                       >
                         <span>INFO</span>
@@ -333,7 +451,16 @@ export const DesktopNav = () => {
                   {router.pathname !== "/contact" ? (
                     <li>
                       <a
-                        href="/contact"
+                        // href="/contact"
+                        onClick={(e) => {
+                          e.preventDefault();
+
+                          TriggerPageExit();
+
+                          setTimeout(() => {
+                            router.push("/contact");
+                          }, 1200);
+                        }}
                         className="orientation-change-element half-second"
                       >
                         <span>CONTACT</span>
@@ -349,7 +476,19 @@ export const DesktopNav = () => {
                 </ul>
 
                 {router.pathname !== "/cart" ? (
-                  <a href="/cart" className={`${styles.cart_link}`}>
+                  <a
+                    // href="/cart"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      TriggerPageExit();
+
+                      setTimeout(() => {
+                        router.push("/cart");
+                      }, 1200);
+                    }}
+                    className={`${styles.cart_link}`}
+                  >
                     <FaShoppingCart
                       className={`${styles.icon} half-second orientation-change-element`}
                     />

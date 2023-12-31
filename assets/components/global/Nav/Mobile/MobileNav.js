@@ -34,7 +34,16 @@ export const MobileNav = () => {
               <div className={`${styles.mobile_nav_inner_side_cnt}`}>
                 {router.pathname !== "/" ? (
                   <a
-                    href="/"
+                    // href="/"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      TriggerPageExit();
+
+                      setTimeout(() => {
+                        router.push("/");
+                      }, 1200);
+                    }}
                     className={`${styles.logo}`}
                     title="Sharpquills - Logo."
                   >
@@ -89,7 +98,19 @@ export const MobileNav = () => {
             >
               <div className={`${styles.mobile_nav_inner_side_cnt}`}>
                 {router.pathname !== "/cart" ? (
-                  <a href="/cart" className={`${styles.cart_link}`}>
+                  <a
+                    // href="/cart"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      TriggerPageExit();
+
+                      setTimeout(() => {
+                        router.push("/cart");
+                      }, 1200);
+                    }}
+                    className={`${styles.cart_link}`}
+                  >
                     <FaShoppingCart
                       className={`${styles.icon} half-second orientation-change-element`}
                     />

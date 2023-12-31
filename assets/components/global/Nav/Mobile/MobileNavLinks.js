@@ -17,7 +17,19 @@ export const MobileNavLinks = () => {
     <ul id="mobileNavLinks" className={`${styles.mobile_nav_links}`}>
       {router.pathname !== "/" ? (
         <li>
-          <a href="/" className="orientation-change-element half-second">
+          <a
+            // href="/"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/");
+              }, 1200);
+            }}
+            className="orientation-change-element half-second"
+          >
             <span>Home</span>
           </a>
         </li>
@@ -62,7 +74,16 @@ export const MobileNavLinks = () => {
       <ul id="mobileNavProductsLinks">
         <li>
           <a
-            href="/store#food"
+            // href="/store#food"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/store#food");
+              }, 1200);
+            }}
             className="orientation-change-element half-second"
           >
             <span>Food</span>
@@ -70,7 +91,16 @@ export const MobileNavLinks = () => {
         </li>
         <li>
           <a
-            href="/store#toys"
+            // href="/store#toys"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/store#toys");
+              }, 1200);
+            }}
             className="orientation-change-element half-second"
           >
             <span>Toys</span>
@@ -78,14 +108,35 @@ export const MobileNavLinks = () => {
         </li>
         <li>
           <a
-            href="/store#housing"
+            // href="/store#housing"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/store#housing");
+              }, 1200);
+            }}
             className="orientation-change-element half-second"
           >
             <span>Housing</span>
           </a>
         </li>
         <li>
-          <a href="/store" className="orientation-change-element half-second">
+          <a
+            // href="/store"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/store");
+              }, 1200);
+            }}
+            className="orientation-change-element half-second"
+          >
             <span>View All</span>
           </a>
         </li>
@@ -124,7 +175,16 @@ export const MobileNavLinks = () => {
       <ul id="mobileNavTypesLinks">
         <li>
           <a
-            href="/types#atelerix"
+            // href="/types#atelerix"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/types#atelerix");
+              }, 1200);
+            }}
             className="orientation-change-element half-second"
           >
             <span>Atelerix</span>
@@ -133,6 +193,15 @@ export const MobileNavLinks = () => {
         <li>
           <a
             href="/types#erinaceus"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/types#erinaceus");
+              }, 1200);
+            }}
             className="orientation-change-element half-second"
           >
             <span>Erinaceus</span>
@@ -140,7 +209,16 @@ export const MobileNavLinks = () => {
         </li>
         <li>
           <a
-            href="/types#hemiechinus"
+            // href="/types#hemiechinus"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/types#hemiechinus");
+              }, 1200);
+            }}
             className="orientation-change-element half-second"
           >
             <span>Hemiechinus</span>
@@ -148,7 +226,16 @@ export const MobileNavLinks = () => {
         </li>
         <li>
           <a
-            href="/types#mesechinus"
+            // href="/types#mesechinus"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/types#mesechinus");
+              }, 1200);
+            }}
             className="orientation-change-element half-second"
           >
             <span>Mesechinus</span>
@@ -156,14 +243,35 @@ export const MobileNavLinks = () => {
         </li>
         <li>
           <a
-            href="/types#paraechinus"
+            // href="/types#paraechinus"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/types#paraechinus");
+              }, 1200);
+            }}
             className="orientation-change-element half-second"
           >
             <span>Paraechinus</span>
           </a>
         </li>
         <li>
-          <a href="/types" className="orientation-change-element half-second">
+          <a
+            // href="/types"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/types");
+              }, 1200);
+            }}
+            className="orientation-change-element half-second"
+          >
             <span>View All</span>
           </a>
         </li>
@@ -171,7 +279,19 @@ export const MobileNavLinks = () => {
 
       {router.pathname !== "/info" ? (
         <li>
-          <a href="/info" className="orientation-change-element half-second">
+          <a
+            // href="/info"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/info");
+              }, 1200);
+            }}
+            className="orientation-change-element half-second"
+          >
             <span>Info</span>
           </a>
         </li>
@@ -183,7 +303,19 @@ export const MobileNavLinks = () => {
 
       {router.pathname !== "/contact" ? (
         <li>
-          <a href="/contact" className="orientation-change-element half-second">
+          <a
+            // href="/contact"
+            onClick={(e) => {
+              e.preventDefault();
+
+              TriggerPageExit();
+
+              setTimeout(() => {
+                router.push("/contact");
+              }, 1200);
+            }}
+            className="orientation-change-element half-second"
+          >
             <span>Contact</span>
           </a>
         </li>
