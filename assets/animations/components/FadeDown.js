@@ -50,7 +50,7 @@ export const FadeDown = ({ threshold = 0.5, children }) => {
       initial={{ opacity: 0, y: -50 }}
       animate={CONTROLS}
       transition={{ duration: 0.5 }}
-      className="fm-element"
+      className="fm-element fade-down half-second"
     >
       {children}
     </motion.div>
